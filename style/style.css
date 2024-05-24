@@ -1,0 +1,243 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-image: url(../image/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 40px;
+    
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+.bookmarker{
+    backdrop-filter: blur(5px);
+    width: 60%;
+    margin: 0 auto;
+}
+
+header{
+    position: relative;
+}
+.line::after{
+    content: "";
+    width: 100%;
+    border-bottom: 3px dotted black;
+    position: absolute;
+    bottom: -15px;
+
+}
+header h1{
+    margin-top: 0;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Pacifico", cursive;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: url(../image/360_F_100741061_CWS2g1WKtscd95UjI8gJD9ieFcc0MpcP.jpg);
+    font-weight: bold;
+    font-size: 50px;
+}
+.bookmarker-content{
+    margin-top: 20px;
+}
+.bookmarker-content h3{
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(109.6deg, rgb(196 143 190) 11.2%, rgb(71 182 230) 100.3%);
+    font-size: 25px;
+    font-family: "Ubuntu Sans", sans-serif;
+    width: fit-content;
+    /* margin: 0 auto 40px auto; */
+    margin: 40px 0;
+}
+.bookmarker-content h3 i{
+    font-size:30px ;
+    vertical-align: middle;
+}
+@media (max-width:550px) {
+    .bookmarker{
+        width: 90%;
+    }
+    .bookmarker-content h3{
+        font-size: 18px;
+        text-align: center;
+    }
+    header h1{
+        font-size: 40px;
+    }
+}
+form{
+    margin-bottom: 40px;
+    position: relative;
+}
+form label{
+    display: block;
+    text-transform: capitalize;
+    font-family: "Ubuntu Sans", sans-serif;
+    margin-bottom: 10px;
+}
+form label i{
+    font-size: 20px;
+    vertical-align: middle;
+}
+form input{
+    margin-bottom: 20px;
+    display: block;
+    outline: none;
+    border: 1px solid #eee;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s;
+    position: relative;
+
+}
+input::placeholder{
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(109.6deg, rgb(196 143 190) 11.2%, rgb(71 182 230) 100.3%);
+    opacity: .4;
+    font-size: 14px;
+}
+input:focus{
+    border-color: rgb(71 182 230) !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #47b6e64f;
+}
+form div button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(71 182 230) ;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+form div button:hover{
+    background-image: linear-gradient(109.6deg, rgb(196 143 190) 11.2%, rgb(71 182 230) 100.3%);
+}
+.bookmarker-content .search{
+    display: block;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    transition: .5s;
+}
+.bookmarker table{
+    background-color: white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.bookmarker table tr th{
+    border-bottom: solid 2px #eee;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.bookmarker table tr td{
+    padding: 10px;
+    border-bottom: solid 2px #eee;
+    text-align: center;
+}
+.bookmarker table tr td button,.bookmarker table tr td a{
+    padding: 10px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.bookmarker table tr td button.update{
+    background-color:rgb(71 182 230 );
+}
+.bookmarker table tr td button.delete{
+    background-color: red;
+}
+.edit{
+    background-color: rgb(71 182 230);
+    display: none;
+}
+.bookmarker table tr td a{
+    background-color:green ;
+    display: block;
+    text-align: center;
+    
+}
+@media (max-width:550px) {
+    .bookmarker table{
+        width: 90%;
+        margin: 40px auto;
+    }
+    .bookmarker table tr th{
+        padding: 5px;
+    }
+
+    .bookmarker table tr td{
+        padding: 5px;
+    }
+}
+
+/* error classes */
+form input.box-error{
+    border-color: red !important;
+}
+form input.box-true{
+    border-color: green !important;
+}
+.box-error:focus{
+    border-color: red !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #ff00004f;
+}
+.box-true:focus{
+    border-color: green !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #0080003b;
+}
+form .input-error,form .input-true{
+    position: relative;
+}
+form .input-error::after,form .input-true::after{
+    font-family: "Font Awesome 5 Free";
+    z-index: 22222;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+
+}
+form .input-error::after{
+    content: '\f06a';
+    color: red;
+}
+form .input-true::after{
+    content: '\f00c';
+    color: green;
+}
